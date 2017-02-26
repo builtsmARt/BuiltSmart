@@ -1,33 +1,24 @@
 Rails.application.routes.draw do
-  get 'products/index'
+    get 'user/new'
+    get 'user/show'
 
-  get 'products/search'
+    get '/products/search', to: 'products#search', as: 'search'
+    resources :users, only: [:new, :create, :show]
+    resources :bookmarks, only: [:create, :destroy, :index]
+    resources :products, only: [:index, :show] do
+      resources :reviews
+    end
+    resources :sessions, only: [:new, :destroy]
+    get '/sessions/login', to: 'sessions#login', as: 'login'
+    post '/sessions/login', to: 'sessions#create'
+    get '/sessions/logout', to: 'sessions#destroy', as: "logout"
 
-  get 'products/show'
+    get '/apis/bookmarks', to: 'apis#bookmarks'
+    get '/apis/bookmarks/:id', to: 'apis#user_bookmarks'
+    get '/apis/products', to: 'apis#products'
+    get '/apis/products/:id', to: 'apis#user_products'
+    get '/apis/users', to: 'apis#users'
+    post '/apis/valid_login', to: 'apis#valid_login'
 
-  get 'reviews/_index'
-
-  get 'reviews/_new'
-
-  get 'reviews/_show'
-
-  get 'reviews/edit'
-
-  get 'boomarks/_delete'
-
-  get 'boomarks/_new'
-
-  get 'boomarks/index'
-
-  get 'users/new'
-
-  get 'users/show'
-
-  get 'sessions/login'
-
-  get 'user/new'
-
-  get 'user/show'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    root "welcome#index"
 end
