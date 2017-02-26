@@ -1,2 +1,30 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<h1><%=@product.name%></h1>
+<div class="bookmark">
+  <%if current_user%>
+    <% if bookmark?(params[:id]) %>
+      <%= render "bookmarks/delete"%>
+    <% else %>
+      <%= render "bookmarks/new", locals: {product: @product}%>
+    <%end%>
+  <%end%>
+</div>
+<div class="product-info">
+  <h3>Product detais:</h3>
+  <p><%=@product.description%></p>
+  <p><a href=<%=@product.pdf_url%>>pdf</a></p>
+</div>
+<br>
+<div class="new-review-form">
+  <%if current_user%>
+    <%if review?(params[:id])%>
+      <p class="product-info">Thanks for the review!</p>
+    <%else%>
+      <h3>Write a review on the difficulty level of building a <%=@product.name%></h3>
+      <%= render partial: "reviews/new"%>
+    <%end%>
+  <%end%>
+</div>
+<br>
+<div class="all-reviews-container">
+  <%= render partial: "reviews/index", locals: {product: @product}%>
+</div>

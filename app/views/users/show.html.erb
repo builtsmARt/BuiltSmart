@@ -1,2 +1,21 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1><%=@user.first_name.capitalize%>'s Profile Page</h1>
+
+<div class="user-bookmarks">
+  <h3><%=@user.first_name.capitalize%>'s Bookmarks</h3>
+  <ul>
+    <%@user.products.each do |product|%>
+    <li><%=link_to "#{product.name}", product_url(product.id)%></li>
+    <%end%>
+  </ul>
+</div>
+
+<div class="user-reviews">
+  <h3><%=@user.first_name.capitalize%>'s Reviews and Ratings</h3>
+<ul>
+  <%@user.reviews.each do |review|%>
+  <h4><%=link_to "#{review.product.name}", product_path(review.product.id)%>
+  - <%=review.difficulty_rating%></h4>
+  <br>
+  <%end%>
+</ul>
+</div>

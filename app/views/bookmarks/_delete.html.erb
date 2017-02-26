@@ -1,0 +1,5 @@
+<div class="bookmark_delete_form" >
+  <%=form_tag("/bookmarks/#{@bookmark.id}", :method => :delete) do  %>
+   <%= submit_tag "Remove Bookmark" %>
+  <% end %>
+</div>
