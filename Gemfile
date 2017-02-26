@@ -37,7 +37,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 #Added for BuiltSmart
 gem 'pry'
-gem 'better_errors'
+# gem 'better_errors'
 gem 'firebase'
 
 

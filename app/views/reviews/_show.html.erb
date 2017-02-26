@@ -1,7 +1,7 @@
 <div class="one-review">
   <%=review.review%><br>
   <p>Difficulty Rating:<%=review.difficulty_rating%></p>
-  <p class="reviewer">Reviewed by <%=review.reviewer.first_name%> on <%=review.created_at.to_datetime.in_time_zone("Central Time (US & Canada)").strftime("%A, %d %b %Y")%></p>
+  <p class="reviewer">Reviewed by <%=review.reviewer.full_name%> on <%=review.created_at.to_datetime.in_time_zone("Central Time (US & Canada)").strftime("%A, %d %b %Y")%></p>
   <div class="edit-review">
     <%if current_user%>
       <%if authorized?(review.user_id)%>

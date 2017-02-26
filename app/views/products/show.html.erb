@@ -1,4 +1,4 @@
-<h1><%=@product.name%></h1>
+<h1><%=@product.title%></h1>
 <div class="bookmark">
   <%if current_user%>
     <% if bookmark?(params[:id]) %>
@@ -9,9 +9,8 @@
   <%end%>
 </div>
 <div class="product-info">
-  <h3>Product detais:</h3>
+  <h3>Product details:</h3>
   <p><%=@product.description%></p>
-  <p><a href=<%=@product.pdf_url%>>pdf</a></p>
 </div>
 <br>
 <div class="new-review-form">
@@ -19,7 +18,7 @@
     <%if review?(params[:id])%>
       <p class="product-info">Thanks for the review!</p>
     <%else%>
-      <h3>Write a review on the difficulty level of building a <%=@product.name%></h3>
+      <h3>Write a review on the difficulty level of building a <%=@product.title%></h3>
       <%= render partial: "reviews/new"%>
     <%end%>
   <%end%>
