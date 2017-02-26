@@ -12,4 +12,9 @@ class ProductsController < ApplicationController
       @products = Product.where('title LIKE ?', "%#{params[:search]}%").all
       render '/products/search'
     end
+
+    def upcsearch
+      upc_api(params[:upcsearch])
+      render '/products/upcsearch'
+    end
 end

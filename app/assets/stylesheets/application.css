@@ -108,3 +108,11 @@ img {
   width: 15%;
   height: 10%;
 }
+
+.upc-manual-list {
+  margin:20px;
+}
+
+.upc-manual-list p{
+  font-weight: bold;
+}
