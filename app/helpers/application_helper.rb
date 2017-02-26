@@ -1,6 +1,6 @@
 module ApplicationHelper
   include UsersHelper
-  include SessionHelper
+  include SessionsHelper
   include ProductsHelper
   include BookmarksHelper
   include ReviewsHelper
