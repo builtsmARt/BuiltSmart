@@ -1,7 +1,7 @@
 <div class="all-reviews">
   <h3>Reviews for <%=product.title%></h3>
-  <%product.reviews.each do |review|%>
-    <%= render partial: "reviews/show", locals: {review: review}%>
-    <br>
-  <%end%>
+  
+  <% product.reviews.each do |review| %>
+    <%= render partial: "reviews/show", locals: {review: review} %>
+  <% end %>
 </div>
