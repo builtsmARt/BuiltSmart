@@ -4,14 +4,14 @@
   <p class="reviewer">Reviewed by <%= review.user.full_name %> on <%= review.created_at.to_datetime.in_time_zone("Central Time (US & Canada)").strftime("%A, %d %b %Y") %></p>
   <div class="edit-review">
     <%if current_user%>
-      <%if authorized?(review.user_id)%>
-       <%=form_tag("/products/#{@product.id}/reviews/#{review.id}/edit", :method => :get) do  %>
-        <%=submit_tag "Edit Review" %>
-       <%end%>
+      <% if authorized?(review.user_id)%>
+       <%= form_tag("/products/#{@product.id}/reviews/#{review.id}/edit", :method => :get) do %>
+        <%= submit_tag "Edit Review" %>
+       <% end %>
        <%=form_tag("/products/#{@product.id}/reviews/#{review.id}", :method => :delete) do  %>
         <%= submit_tag "Delete" %>
-       <%end%>
-      <%end%>
+       <% end %>
+      <%end %>
     <%end%>
   </div>
  </div>
