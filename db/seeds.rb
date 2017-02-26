@@ -1,7 +1,6 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+kane = User.create(full_name: "Kane", email: "k@k.com", password: "a")
+tony = User.create(full_name:"Tony", email: "t@t.com", password: "a")
+bob = User.create(full_name:"Bob", email: "b@b.com", password: "a")
+chair = Product.create(title:"chair")
+tony.bookmarks.create(product_id: 1)
+tony.reviews.create(review:"This was a very difficult product to build. I sure wish I had been able to use BuiltSmart when I was putting it together! It broke but I had lost the manual and thought I would have to throw it away. Thanks to BuiltSmart I found the materials I need it to fix up my favorite chair!", difficulty_rating: "5", product_id: 1)

@@ -1,0 +1,5 @@
+<div class="all-products">
+  <%@products.each do |product|%>
+    <%=link_to "#{product.title}", product_path(product.id) %><br>
+  <%end%>
+</div>

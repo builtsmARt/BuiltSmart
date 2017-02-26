@@ -1,0 +1,12 @@
+<div class="standard-form">
+  <%= render partial: "partials/errors"%>
+  <%= form_for(:session, url: login_path) do  |f| %>
+    <%= f.label :email %><br>
+    <%= f.email_field :email %>
+    <br>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+    <br>
+    <%= f.submit "Log In" %>
+  <%end%>
+</div>

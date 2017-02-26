@@ -1,0 +1,10 @@
+<%= render partial: "partials/errors"%>
+<div class="new-review-form">
+  <%=form_for :review, url: "/products/#{@product.id}/reviews/#{@review.id}",  method: :put do |f| %>
+    <%= f.label :review %><br>
+    <%= f.text_area :review, value: @review.review%><br>
+    <%=f.select :difficulty_rating, options_for_select(1..5), {prompt: "Select difficulty rating"}%>
+    <%= f.hidden_field :user_id, value: current_user.id  %>
+    <%= f.submit "Submit"%><br>
+  <%end%>
+</div>
