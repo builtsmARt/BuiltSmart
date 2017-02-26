@@ -19,6 +19,14 @@ class ApisController < ApplicationController
    render json: { results: @products }
  end
 
+ def upc_search(query)
+   root="https://api.upcitemdb.com/prod/trial/lookup?upc=#{query}"
+   response = Net::HTTP.get(URI(root))
+   parsed_response = JSON.parse(response)["items"][0]
+   @item_info={results: parsed_response}
+   render json: @item_info
+ end
+
  def users
    @users = User.all
    render json: @users
