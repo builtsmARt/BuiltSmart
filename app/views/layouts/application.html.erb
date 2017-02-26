@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BuiltSmart</title>
+    <title>builtsmARt</title>
     <%= csrf_meta_tags %>
-
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
 
-    <header class="nav-bar-container">
-      <h1>BuiltSmart</h1>
-       <nav class='nav-bar'>
-         <% if login? %>
-           <span class="nav-links">
-             <%= link_to 'Logout', session_path(current_user),
-             method: :delete %>
-             <%= link_to 'Profile', user_path(current_user) %>
-           </span>
-         <% else %>
-           <div class="nav-links">
-             <%= link_to 'Login', login_path %>
-             <%= link_to 'Sign Up', new_user_path %>
-           </div>
-         <% end %>
-         <span class="public-nav">
-          <%=link_to 'Home', root_path %>
-          <%=link_to 'All Furniture', products_path %>
-          <%= form_tag search_path, :method => "get", id: "search-form" do %>
-            <%= text_field_tag :search, params[:search], placeholder: "Search furniture", id: "search" %>
-          <% end %>
-        </span>
-     </nav>
-   </header>
+   <nav class='nav-bar'>
+     <div class="container">
+      <span class="brand">
+        <a href="/">builtsm<span>AR</span>t</a>
+      </span>
+      
+      <span class="nav-links">
+        <%= form_tag search_path, :method => "get", id: "search-form" do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search furniture", id: "search" %>
+          <i class="fa fa-search" aria-hidden="true"></i>
+        <% end %>
+      </span>
+        <% if login? %>
+          <span class="nav-links">
+           <%= link_to 'Logout', session_path(current_user),
+           method: :delete %>
+          </span>
+          
+          <span class="nav-links">
+           <%= link_to 'Profile', user_path(current_user) %>
+          </span>
+        <% else %>
+          <span class="nav-links">
+           <%= link_to 'Login', login_path %>
+          </span>
+          
+          <span class="nav-links">
+           <%= link_to 'Sign Up', new_user_path %>
+          </span>
+        <% end %>
+      
+      <span class="nav-links">
+      <%=link_to 'Browse Manuals', products_path %>
+      </span>
+    
+    </div>
+  </nav>
 
     <%= yield %>
+    
+    <footer class="container">
+      <section>
+        <div></div>  
+        <div></div>  
+      </section>
+      
+      <section>
+        <span>©2017 buildsmARt, Inc.</span>
+        <span>Privacy Policy</span>
+        <span>Terms of Services</span>
+      </section>
+    </footer>
   </body>
 </html>

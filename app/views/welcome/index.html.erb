@@ -1,7 +1,11 @@
-<h1>Welcome BuiltSmart</h1>
-<p>Taking the BS out of difficult assembly instructions</p>
-<div class="upc-search">
-  <%= form_tag upcsearch_path, :method => "get", id: "upcsearch-form" do %>
-    <%= text_field_tag :upcsearch, params[:upcsearch], placeholder: "Search furniture by UPC", id: "upcsearch" %>
-  <% end %>
-</div>
+<header>
+  <p>Taking the BS out of difficult assembly instructions</p>
+</header>
+
+<section>
+  <div class="upc-search">
+    <%= form_tag upcsearch_path, :method => "get", id: "upcsearch-form" do %>
+      <%= text_field_tag :upcsearch, params[:upcsearch], placeholder: "Search furniture by UPC", id: "upcsearch" %>
+    <% end %>
+  </div>
+</section>
