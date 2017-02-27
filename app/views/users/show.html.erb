@@ -1,21 +1,28 @@
-<h1><%=@user.full_name.capitalize%>'s Profile Page</h1>
-<a href="ibuiltbanner://">Use AR with our app!</a><br/>
-<div class="user-bookmarks">
-  <h3><%=@user.full_name.capitalize%>'s Bookmarks</h3>
-  <ul>
-    <%@user.products.each do |product|%>
-    <li><%=link_to "#{product.title}", product_url(product.id)%></li>
-    <%end%>
-  </ul>
-</div>
+<section class="padding-top container">
+  <section class="user-profile">
+    <h1><%=@user.full_name.capitalize%>'s Profile Page</h1>
 
-<div class="user-reviews">
-  <h3><%=@user.full_name.capitalize%>'s Reviews and Ratings</h3>
-<ul>
-  <%@user.reviews.each do |review|%>
-  <h4><%=link_to "#{review.product.title}", product_path(review.product.id)%>
-  - <%=review.difficulty_rating%></h4>
-  <br>
-  <%end%>
-</ul>
-</div>
+
+  <a href="ibuiltbanner://">Use AR with our app!</a><br/>
+  
+    <div class="user-bookmarks">
+      <h3>Bookmarks</h3>
+      <ul>
+        <%@user.products.each do |product|%>
+        <li><%=link_to "#{product.title}", product_url(product.id)%></li>
+        <%end%>
+      </ul>
+    </div>
+  
+    <div class="user-reviews">
+      <h3>Reviews and Ratings</h3>
+      <ul>
+        <% @user.reviews.each do |review| %>
+        <li><%= link_to "#{review.product.title}", product_path(review.product.id) %>
+        - <%= review.difficulty_rating %></li>
+        <% end %>
+      </ul>
+    </div>
+  </section>
+</section>
+
