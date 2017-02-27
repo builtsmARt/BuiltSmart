@@ -454,3 +454,28 @@ footer .legal span {
   background-color: white;
 }
 
+
+.new-review-form .standard-form {
+  padding: 0px;
+}
+
+.new-review-form .standard-form input[type="submit"] {
+  background-color: grey;
+}
+
+.new-review-form .standard-form input[type="submit"]:hover {
+  background-color: #DB5800;
+}
+
+.new-review-form .standard-form label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.new-review-form .standard-form select {
+  width: 250px;
+}
+
+.new-review-form .standard-form {
+  margin-top: 20px;
+}
