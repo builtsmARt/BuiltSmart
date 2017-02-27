@@ -1,9 +1,12 @@
 <section class="padding-top container">
-  <div class="product-list">
-    <% @products.each do |product|%>
-    <div class="products">
-      <%= link_to "#{product.title}" , product_path(product.id) %>
-    </div>
-    <% end %>
+  <div class="all-products">
+    <h3>Search Result</h3>
+    <div class="product-results">
+      <% @products.each do |product|%>
+        <div class="product-item">
+          <%= link_to "#{product.title}" , product_path(product.id) %>
+        </div>
+      <% end %>
+      </div>
   </div>
 </section>
