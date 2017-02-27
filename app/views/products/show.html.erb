@@ -1,29 +1,34 @@
-<h1><%=@product.title%></h1>
-<div class="bookmark">
-  <%if current_user%>
-    <% if bookmark?(params[:id]) %>
-      <%= render "bookmarks/delete"%>
-    <% else %>
-      <%= render "bookmarks/new", locals: {product: @product}%>
-    <%end%>
-  <%end%>
-</div>
-<div class="product-info">
-  <h3>Product details:</h3>
-  <p><%=@product.description%></p>
-</div>
-<br>
-<div class="new-review-form">
-  <%if current_user%>
-    <%if review?(params[:id])%>
-      <p class="product-info">Thanks for the review!</p>
-    <%else%>
-      <h3>Write a review on the difficulty level of building a <%=@product.title%></h3>
-      <%= render partial: "reviews/new"%>
-    <%end%>
-  <%end%>
-</div>
-<br>
-<div class="all-reviews-container">
-  <%= render partial: "reviews/index", locals: {product: @product}%>
-</div>
+<section class="padding-top container">
+  <section class="manual-show">
+    <h1><%=@product.title%></h1>
+    <div class="bookmark">
+      <%if current_user%>
+        <% if bookmark?(params[:id]) %>
+          <%= render "bookmarks/delete"%>
+        <% else %>
+          <%= render "bookmarks/new", locals: {product: @product}%>
+        <%end%>
+      <%end%>
+    </div>
+    <div class="product-info">
+      <h3>Product details:</h3>
+      <p><%=@product.description%></p>
+    </div>
+    <br>
+    <div class="new-review-form">
+      <%if current_user%>
+        <%if review?(params[:id])%>
+          <p class="product-info">Thanks for the review!</p>
+        <%else%>
+          <h3>Write a review on the difficulty level of building a <%=@product.title%></h3>
+          <%= render partial: "reviews/new"%>
+        <%end%>
+      <%end%>
+    </div>
+    <br>
+    <div class="all-reviews-container">
+      <%= render partial: "reviews/index", locals: {product: @product}%>
+    </div>
+  </section>
+</section>
+

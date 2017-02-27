@@ -1,5 +1,12 @@
-<div class="all-products">
-  <%@products.each do |product|%>
-    <%=link_to "#{product.title}", product_path(product.id) %><br>
-  <%end%>
-</div>
+<section class="padding-top container">
+  <div class="all-products">
+    <h3>All manuals</h3>
+    <div class="product-results">
+      <% @products.each do |product| %>
+        <div class="product-item">
+          <%= link_to "#{product.title}", product_path(product.id) %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</section>
