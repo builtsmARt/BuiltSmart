@@ -28,10 +28,12 @@ ActiveRecord::Schema.define(version: 20170226160316) do
     t.string   "brand"
     t.string   "title"
     t.string   "barcode_link"
-    t.integer  "EAN"
-    t.integer  "UPC"
-    t.integer  "ASIN"
-    t.integer  "model"
+    t.string   "ASIN"
+    t.string   "image_url"
+    t.string   "pdf_url"
+    t.string   "EAN"
+    t.string   "UPC"
+    t.string   "model"
     t.text     "description"
     t.boolean  "has_ar",       default: false
     t.datetime "created_at",                   null: false
