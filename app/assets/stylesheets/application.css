@@ -360,8 +360,15 @@ footer .legal span {
   padding: 5px;
 }
 
-.manual-show .bookmark input[type="submit"] {
+.manual-show input[type="submit"] {
   padding: 5px;
+  background-color: grey;
+  color: white;
+  border: none;
+}
+
+.manual-show input[type="submit"]:hover {
+  background-color: #DB5800;
 }
 
 
