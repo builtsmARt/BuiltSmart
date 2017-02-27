@@ -1,7 +1,10 @@
 <section class="padding-top container">
   <section class="user-profile">
     <h1><%=@user.full_name.capitalize%>'s Profile Page</h1>
-    
+
+
+  <a href="ibuiltbanner://">Use AR with our app!</a><br/>
+  
     <div class="user-bookmarks">
       <h3>Bookmarks</h3>
       <ul>
@@ -10,14 +13,14 @@
         <%end%>
       </ul>
     </div>
-    
+  
     <div class="user-reviews">
       <h3>Reviews and Ratings</h3>
       <ul>
-        <%@user.reviews.each do |review|%>
-        <li><%=link_to "#{review.product.title}", product_path(review.product.id)%>
-        - <%=review.difficulty_rating%></li>
-        <%end%>
+        <% @user.reviews.each do |review| %>
+        <li><%= link_to "#{review.product.title}", product_path(review.product.id) %>
+        - <%= review.difficulty_rating %></li>
+        <% end %>
       </ul>
     </div>
   </section>
