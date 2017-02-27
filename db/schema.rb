@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170226160316) do
+ActiveRecord::Schema.define(version: 20170227174316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,11 @@ ActiveRecord::Schema.define(version: 20170226160316) do
     t.index ["user_id"], name: "index_bookmarks_on_user_id", using: :btree
   end
 
+  create_table "ikea_products", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string   "brand"
     t.string   "title"
@@ -34,6 +39,7 @@ ActiveRecord::Schema.define(version: 20170226160316) do
     t.string   "EAN"
     t.string   "UPC"
     t.string   "model"
+    t.string   "name"
     t.text     "description"
     t.boolean  "has_ar",       default: false
     t.datetime "created_at",                   null: false

@@ -9,7 +9,7 @@ tony.reviews.create(review:"This was a very difficult product to build. I sure w
 # upc_numbers=[000772087896, etc]
 
 Product.create(
-name: "Norberg"
+name: "Norberg",
 UPC: "608938304360",
 ASIN: "B0050S7CK8",
 model: "8789",
