@@ -18,25 +18,27 @@ body, html {
 }
 
 nav {
-  background-color: #444;
+  background-color: rgba(22, 29, 37, 1);
+  position: fixed;
   width: 100%;
   height: 60px;
+  border-bottom: .5px solid white;
 }
 
 nav.nav-bar div {
   line-height: 60px;
 }
 
-nav .brand {
+.brand {
   font-size: 30px;
   font-family: 'Righteous', cursive;
 }
 
-nav .brand span {
+.brand span {
   color: #DB5800;
 }
 
-nav .brand a {
+.brand a {
   color: white;
   text-decoration: none;
 }
@@ -75,6 +77,117 @@ nav #search-form i.fa-search {
   position: absolute;
   bottom: 20px;
   right: 10px;
+}
+
+/* Footer */
+
+footer {
+  color: white;
+  min-height: 100px;
+  background-color: rgba(22, 29, 37, 1);
+}
+
+footer .contacts {
+  display: flex;
+}
+
+footer .contacts div{
+  width: 300px;
+  margin: 0px 5px;
+}
+
+
+footer .contacts li.f-nav-heading {
+  text-align: center;
+  background-color: #006899;
+  padding: 10px;
+}
+
+footer .contacts li{
+ list-style: none;
+ border-bottom: #3c3c3c solid .5px;
+}
+
+footer .contacts li a {
+  display: inline-block;
+  padding: 10px;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+}
+
+footer .contacts li a:hover {
+  background-color: #DB5800;
+}
+
+footer .contacts li.f-contacts-heading {
+  text-align: center;
+  background-color: #008F68;
+  padding: 10px;
+  
+}
+
+footer .legal {
+  font-size: 12px;
+  padding: 10px 0px;
+  border-top: .5px white solid;
+  min-height: 20px;
+}
+
+footer .legal span {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+/* landing */
+.content {
+  padding-top: 60px;
+}
+
+.landing {
+  height: 100%;
+}
+
+.landing header.hero {
+  background-image: url("bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-color: #444;
+}
+
+.landing header.hero .headline {
+  padding-right: 500px;
+  padding-top: 110px;
+}
+
+.landing header.hero p {
+  font-size: 30px;
+  color: white;
+}
+
+.landing header.hero a {
+    background-color: white;
+    padding: 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 31px;
+}
+
+.landing header.hero a:hover {
+  background-color: #DB5800;
+  color: white;
+}
+
+.paddings {
+  padding: 30px 0px;
+}
+
+.intro {
+  min-height: 100px;
 }
 
 /*#home-button{*/
