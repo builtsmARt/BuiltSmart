@@ -389,3 +389,18 @@ footer .legal span {
   list-style: none;
   padding: 10px;
 }
+
+.user-profile .ar-link {
+  margin-bottom: 20px;
+}
+
+.user-profile .ar-link a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  background-color: grey;
+}
+
+.user-profile .ar-link a:hover {
+  background-color: #DB5800;
+}
