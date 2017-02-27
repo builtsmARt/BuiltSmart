@@ -9,8 +9,12 @@
 
 <section class="intro paddings">
   <section class="container">
+    <div class="title">
+      <h2>builtsmARt Technology and Solutions</h2>
+    </div>
     <div class="card-container">
       <div class="cards">
+        <p class="icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></p>
         <h3>Propreitary Technology</h3>
         <ul>
           <li>Bringing visual and auditory step by step instructions to life</li>
@@ -19,16 +23,19 @@
         </ul>
       </div>
       <div class="cards">
-        <h3>Propreitary Technology</h3>
+        <p class="icon"><i class="fa fa-linode" aria-hidden="true"></i></p>
+        <h3>Value Proposition</h3>
         <ul>
-          <li>Bringing visual and auditory step by step instructions to life</li>
-          <li>Using augmented reality on your phone to access 3D directions from physical manual</li>
-          <li>Technology for step by step assembly of funirtures based on 2D visual guide</li>
+          <li>Addressing problem of time and frustration in assembly through the use of technology</li>
+          <li>Offering consumers seamless visuals and auditory support</li>
+          <li>Helping businesses access to target markets and brand exposure</li>
         </ul>
       </div>
     </div>
     
     <div class="upc-search">
+      <h3>Try it out!</h3>
+      <h3>Search our database of manuals.</h3>
       <%= form_tag upcsearch_path, :method => "get", id: "upcsearch-form" do %>
         <%= text_field_tag :upcsearch, params[:upcsearch], placeholder: "Search furniture by UPC", id: "upcsearch" %>
       <% end %>
