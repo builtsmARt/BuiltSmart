@@ -10,8 +10,14 @@
 </div>
 <div class="product-info">
   <h3>Product details:</h3>
+    <%if @product.image_url%>
+      <div class="product-image">
+        <img src= <%=@product.image_url%> alt="No Product Image Available">
+      </div>
+    <%end%>
   <p><%=@product.description%></p>
 </div>
+
 <br>
 <div class="new-review-form">
   <%if current_user%>
