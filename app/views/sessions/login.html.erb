@@ -1,12 +1,9 @@
-<div class="standard-form">
-  <%= render partial: "partials/errors"%>
+<div class="standard-form container">
+  <h3>Log In</h3>
+  <%= render partial: "partials/errors" %>
   <%= form_for(:session, url: login_path) do  |f| %>
-    <%= f.label :email %><br>
-    <%= f.email_field :email %>
-    <br>
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-    <br>
+    <%= f.email_field :email, placeholder: "Email" %>
+    <%= f.password_field :password, placeholder: "Password" %>
     <%= f.submit "Log In" %>
-  <%end%>
+  <% end %>
 </div>
