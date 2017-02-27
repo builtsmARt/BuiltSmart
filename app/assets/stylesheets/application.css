@@ -360,8 +360,15 @@ footer .legal span {
   padding: 5px;
 }
 
-.manual-show .bookmark input[type="submit"] {
+.manual-show input[type="submit"] {
   padding: 5px;
+  background-color: grey;
+  color: white;
+  border: none;
+}
+
+.manual-show input[type="submit"]:hover {
+  background-color: #DB5800;
 }
 
 
@@ -388,4 +395,87 @@ footer .legal span {
 .user-reviews li {
   list-style: none;
   padding: 10px;
+}
+
+.user-profile .ar-link {
+  margin-bottom: 20px;
+}
+
+.user-profile .ar-link a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  background-color: grey;
+}
+
+.user-profile .ar-link a:hover {
+  background-color: #DB5800;
+}
+
+/* review */
+.edit-review {
+  padding-bottom: 50px;
+}
+
+.edit-review {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.new-review-form h3 {
+  padding-bottom: 20px;
+}
+
+.new-review-form textarea {
+  width: 250px;
+  height: 100px;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.new-review-form select {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.new-review-form label {
+  margin-bottom: 10px;  
+  display: inline-block;
+  font-size: 13px;
+}
+
+.new-review-form input[type="submit"] {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: white;
+}
+
+
+.new-review-form .standard-form {
+  padding: 0px;
+}
+
+.new-review-form .standard-form input[type="submit"] {
+  background-color: grey;
+}
+
+.new-review-form .standard-form input[type="submit"]:hover {
+  background-color: #DB5800;
+}
+
+.new-review-form .standard-form label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.new-review-form .standard-form select {
+  width: 250px;
+}
+
+.new-review-form .standard-form {
+  margin-top: 20px;
 }
