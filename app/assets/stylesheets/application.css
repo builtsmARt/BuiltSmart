@@ -366,3 +366,26 @@ footer .legal span {
 
 
 /* user profile */
+.user-profile h1 {
+  font-size: 25px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.user-profile h3 {
+  padding: 10px 0px 5px;
+  border-bottom: 1px solid #444;
+}
+
+.user-profile {
+  padding: 0px 0px 50px;
+}
+
+.user-reviews {
+  padding: 20px 0px;
+}
+
+.user-reviews li {
+  list-style: none;
+  padding: 10px;
+}
