@@ -316,5 +316,53 @@ footer .legal span {
 
 
 /* manual show */
+.manual-show {
+  padding-bottom: 50px;
+}
+
+.manual-show h1 {
+  padding: 0px 0px 20px;
+}
+
+.manual-show h3 {
+  padding: 20px 0px;
+}
+
+.manual-show .all-reviews-container .one-review p {
+  padding-bottom: 10px;
+}
+
+.manual-show .all-reviews-container .one-review {
+  border-bottom: 1px solid #f0995f;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.manual-show .all-reviews-container .one-review .reviewer {
+  font-size: 13px;
+}
+
+.manual-show .all-reviews-container .one-review .difficult {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.manual-show .all-reviews-container .one-review .difficult span {
+  padding-left: 10px;
+}
+
+.manual-show .all-reviews-container .one-review .edit-review form {
+  display: inline-block;
+}
+
+.manual-show .all-reviews-container .one-review .edit-review input[type="submit"] {
+  display: inline-block;
+  padding: 5px;
+}
+
+.manual-show .bookmark input[type="submit"] {
+  padding: 5px;
+}
+
 
 /* user profile */
