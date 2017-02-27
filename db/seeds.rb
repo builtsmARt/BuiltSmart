@@ -9,8 +9,14 @@ tony.reviews.create(review:"This was a very difficult product to build. I sure w
 # upc_numbers=[000772087896, etc]
 
 Product.create(
-UPC: 608938304360, EAN: , ASIN: "B0050S7CK8" , model: 608938304360, brand: "Ikea", title: "Ikea Wall-Mounted Drop-leaf Folding Table", barcode_link: "", description: "Folds flat; saves space when not in use. - Solid wood, a hardwearing natural material. - Seats 2.")
+UPC: "608938304360",
+ASIN: "B0050S7CK8",
+model: "8789",
+brand: "Ikea",
+title: "Ikea Wall-Mounted Drop-leaf Folding Table",
+image_url: "http://s7d4.scene7.com/is/image/BonTon/823607?$ibm_large$", description: "Folds flat; saves space when not in use. - Solid wood, a hardwearing natural material. - Seats 2."
 )
+
 
 
 # Product.create(
