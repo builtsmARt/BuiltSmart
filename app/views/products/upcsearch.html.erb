@@ -1,8 +1,11 @@
+<br>
+<br>
+<br>
 <div class="upc-manual-list">
-  <h1><%=@item_info[:results]["title"]%></h1>
+  <h1><%=@item_info[:results]["title"]%></h1><br><br>
   <%@item_info.each do |results, all|%>
     <%all.each do|key, value|%>
-    <%unless key == "images"|| key =="offers"%>
+    <%unless key == "images"|| key == "offers" || key == "size"|| key == "dimension" || key == "weight" || key == "currency"%>
       <p><%=key%>:</p>
       <%=value%><br><br>
       <%end%>
