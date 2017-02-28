@@ -12,6 +12,10 @@ body, html {
   font-family: 'Ubuntu', sans-serif;
 }
 
+.m-nav-links {
+  display: none;
+}
+
 .container {
   margin: 0 auto;
   width: 1000px;
@@ -501,6 +505,10 @@ footer .legal span {
     width: 400px;
   }
   
+  .m-nav-links {
+  display: inline-block;
+  }
+  
   footer .contacts div {
     width: 380px;
     margin: 0 auto;
@@ -569,6 +577,10 @@ footer .legal span {
   .container {
     width: 375px;
     margin: 0px;
+  }
+  
+  .m-nav-links {
+    display: inline-block;
   }
   
   
@@ -648,7 +660,10 @@ footer .legal span {
     width: 320px;
     margin: 0px;
   }
-  
+
+  .m-nav-links {
+    display: inline-block;
+  }
   
   .landing header.hero .headline {
     padding: 110px 10px;
