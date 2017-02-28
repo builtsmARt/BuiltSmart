@@ -18,9 +18,9 @@ class UsersController < ApplicationController
     end
 
     def show
-      @product = IkeaProduct.find_by(id: 2)
       require_user
       @user = User.find_by_id(params[:id])
+      @product = IkeaProduct.find_by(id: 2)
     end
 
     private
