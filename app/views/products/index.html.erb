@@ -7,6 +7,12 @@
           <%= link_to "#{product.title}", product_path(product.id) %>
           </div>
       <% end %>
+      <% @ikeas.each do |product| %>
+        <div class="product-item">
+          <%=product.product_name %>
+          <img src="<%="http://www.ikea.com#{product.photo_path}"%>" alt="">
+          </div>
+      <% end %>
     </div>
   </div>
 </section>
