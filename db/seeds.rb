@@ -23,8 +23,15 @@ title: "Ikea Wall-Mounted Drop-leaf Folding Table",
 image_url: "http://s7d4.scene7.com/is/image/BonTon/823607?$ibm_large$", description: "Folds flat; saves space when not in use. - Solid wood, a hardwearing natural material. - Seats 2."
 )
 
+wardrobe = IkeaProduct.new
+wardrobe.ikea_scraper(10308773)
+wardrobe.save
 
+wardrobe = IkeaProduct.new
+wardrobe.ikea_scraper("S79129608")
+wardrobe.save
 
+# ikea = [20297646, 10308773,"S29007850", "S79129608"]
 # Product.create(
 # UPC: , EAN: , ASIN: , model: ,brand: "", title: "", barcode_link: "", description: "")
 # )
