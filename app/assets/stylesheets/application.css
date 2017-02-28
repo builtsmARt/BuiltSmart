@@ -6,6 +6,14 @@
   padding: 0;
 }
 
+h1.product-name {
+  font-size: 50px;
+}
+
+.upc-manual-list {
+  margin: 20px;
+}
+
 body, html {
   height: 100%;
   width: 100%;
@@ -445,7 +453,7 @@ footer .legal span {
 }
 
 .new-review-form label {
-  margin-bottom: 10px;  
+  margin-bottom: 10px;
   display: inline-block;
   font-size: 13px;
 }
@@ -486,82 +494,82 @@ footer .legal span {
 
 /* mobile webiste - iphone 6 plus size only */
 
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 3) {
-  
+
   .container {
     width: 400px;
     margin: 0px;
   }
-  
-  
+
+
   .landing header.hero .headline {
     padding: 110px 10px;
   }
-  
+
   .intro .title {
     width: 400px;
   }
-  
+
   .m-nav-links {
   display: inline-block;
   }
-  
+
   footer .contacts div {
     width: 380px;
     margin: 0 auto;
     padding: 15px;
   }
-  
+
   footer .contacts {
     display: block;
   }
-  
+
   .nav-links {
     display: none;
   }
-  
+
   .m-nav-links #search {
     margin-left: 15px;
   }
-  
+
   .mobile-nav {
     line-height: 15px;
     width: 414px;
     background-color: #444;
     padding: 10px;
   }
-  
+
   .mobile-nav span {
     width: 126px;
     text-align: center;
     display: inline-block;
   }
-  
+
   .mobile-nav a {
     color: white;
     text-decoration: none;
     display: inline-block;
   }
-  
+
   nav.nav-bar div {
     line-height: 55px;
   }
-  
+
   nav .brand {
     margin-left: 15px;
   }
-  
+
   div.all-products {
     margin-left: 10px;
   }
-  
+
   section.manual-show {
     margin-left: 10px;
   }
-  
+
   section.user-profile {
     margin-left: 10px;
   }
@@ -569,90 +577,90 @@ footer .legal span {
 
 /* iphone 6 */
 
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 413px) 
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 413px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    
+
   .container {
     width: 375px;
     margin: 0px;
   }
-  
+
   .m-nav-links {
     display: inline-block;
   }
-  
-  
+
+
   .landing header.hero .headline {
     padding: 110px 10px;
   }
-  
+
   .intro .title {
     width: 375px;
   }
-  
+
   footer .contacts div {
     width: 375px;
     margin: 0 auto;
     padding: 15px;
   }
-  
+
   footer .contacts {
     display: block;
   }
-  
+
   .nav-links {
     display: none;
   }
-  
+
   .m-nav-links #search {
     padding: 0px;
   }
-  
+
   .mobile-nav {
     line-height: 15px;
     width: 375px;
     background-color: #444;
     padding: 5px;
   }
-  
+
   .mobile-nav span {
     width: 108px;
     text-align: center;
     display: inline-block;
   }
-  
+
   .mobile-nav a {
     font-size: 13px;
     color: white;
     text-decoration: none;
     display: inline-block;
   }
-  
+
   nav.nav-bar div {
     line-height: 55px;
   }
-  
+
   nav .brand {
     margin-left: 15px;
   }
-  
+
   div.all-products {
     margin-left: 10px;
   }
-  
+
   section.manual-show {
     margin-left: 10px;
   }
-  
+
   section.user-profile {
     margin-left: 10px;
   }
-    
+
 }
 
-@media only screen 
+@media only screen
   and (max-device-width: 370px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
@@ -664,70 +672,70 @@ footer .legal span {
   .m-nav-links {
     display: inline-block;
   }
-  
+
   .landing header.hero .headline {
     padding: 110px 10px;
   }
-  
+
   .intro .title {
     width: 320px;
   }
-  
+
   footer .contacts div {
     width: 320px;
     margin: 0 auto;
     padding: 15px;
   }
-  
+
   footer .contacts {
     display: block;
   }
-  
+
   .nav-links {
     display: none;
   }
-  
+
   .m-nav-links #search {
     padding: 0px;
     width: 130px;
   }
-  
+
   .mobile-nav {
     line-height: 15px;
     width: 320px;
     background-color: #444;
     padding: 5px;
   }
-  
+
   .mobile-nav span {
     width: 95px;
     text-align: center;
     display: inline-block;
   }
-  
+
   .mobile-nav a {
     font-size: 10px;
     color: white;
     text-decoration: none;
     display: inline-block;
   }
-  
+
   nav.nav-bar div {
     line-height: 55px;
   }
-  
+
   nav .brand {
     margin-left: 15px;
   }
-  
+
   div.all-products {
     margin-left: 10px;
   }
-  
+
   section.manual-show {
     margin-left: 10px;
   }
-  
+
   section.user-profile {
     margin-left: 10px;
   }
