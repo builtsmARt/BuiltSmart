@@ -7,10 +7,15 @@
           <%= link_to "#{product.title}", product_path(product.id) %>
           </div>
       <% end %>
+      <br>
+      <br>
+      <h2>Ikea Products</h2>
       <% @ikeas.each do |product| %>
         <div class="product-item">
           <%=product.product_name %>
           <img src="<%="http://www.ikea.com#{product.photo_path}"%>" alt="">
+          <iframe src="https://docs.google.com/gview?url=http://www.ikea.com<%=product.pdf_path%>&embedded=true" style="width:1170px; height:800px;" frameborder="0"></iframe>
+          <a href="https://docs.google.com/gview?url=http://www.ikea.com<%=product.pdf_path%>&embedded=true">Assembly Instructions</a>
           </div>
       <% end %>
     </div>
