@@ -3,7 +3,7 @@
     <h1><%=@user.full_name.capitalize%>'s Profile Page</h1>
 
   <div class="ar-link">
-    <a href="ibuiltbanner://">Use AR with our app!</a><br/>
+    <a href="BS_Demo_App://">Use AR with our app!</a><br/>
   </div>
     <div class="user-bookmarks">
       <h3>Bookmarks</h3>
@@ -13,7 +13,7 @@
         <%end%>
       </ul>
     </div>
-  
+
     <div class="user-reviews">
       <h3>Reviews and Ratings</h3>
       <ul>
@@ -26,3 +26,6 @@
   </section>
 </section>
 
+<h2>Ikea Product</h2>
+<%=@product.product_name %>
+<a href="https://docs.google.com/gview?url=http://www.ikea.com<%=@product.pdf_path%>&embedded=true">Assembly Instructions</a>
