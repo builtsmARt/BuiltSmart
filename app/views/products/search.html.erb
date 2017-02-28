@@ -2,11 +2,12 @@
   <div class="all-products">
     <h3>Search Result</h3>
     <div class="product-results">
-      <% @products.each do |product|%>
+      <% @products.each do |product| %>
         <div class="product-item">
-          <%= link_to "#{product.title}" , product_path(product.id) %>
-        </div>
+          <%= link_to "#{product.name}", product_path(product.id) %><br>
+          <%=product.image_url%><br>
+          <%=product.title%>
+          </div>
       <% end %>
-      </div>
   </div>
 </section>
