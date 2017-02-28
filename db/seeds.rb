@@ -20,14 +20,14 @@ title: "Ikea Wall-Mounted Drop-leaf Folding Table",
 image_url: "http://ecx.images-amazon.com/images/I/31l5jdtVgPL._SL160_.jpg", description: "Folds flat; saves space when not in use. - Solid wood, a hardwearing natural material. - Seats 2."
 )
 
-upc_numbers=['078608002382', '608938304360', '611230124536', '609613408076', '740016860631']
+upc_numbers=['078608002382', '608938304360', '611230124536', '609613408076', '740016860631', '2171339330']
 upc_numbers.each do |upc|
   product = Product.new
   product.create_upc_product(upc)
   product.save
 end
 
-ikea_article_numbers = ["30180504","20297646", "10308773","S29007850", "S79129608"]
+ikea_article_numbers = ["30180504","20297646", "10308773","S29007850", "S79129608", ]
 
 ikea_article_numbers.each do |article_number|
   ikea_product = IkeaProduct.new
