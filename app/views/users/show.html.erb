@@ -3,26 +3,26 @@
     <h1><%=@user.full_name.capitalize%>'s Profile Page</h1>
 
   <div class="ar-link">
-    <a href="ibuiltbanner://">Use AR with our app!</a><br/>
+    <a href="BS_Demo_App://">Use AR with our app!</a><br/>
   </div>
     <div class="user-bookmarks">
       <h3>Bookmarks</h3>
       <ul>
         <%@user.products.each do |product|%>
-        <li><%=link_to "#{product.title}", product_url(product.id)%></li>
+        <li><%=link_to "#{product.name}", product_url(product.id)%></li>
+        <br><a href="#{product.pdf_url}">Click for PDF Direction</a>
         <%end%>
       </ul>
     </div>
-  
+
     <div class="user-reviews">
       <h3>Reviews and Ratings</h3>
       <ul>
         <% @user.reviews.each do |review| %>
-        <li><%= link_to "#{review.product.title}", product_path(review.product.id) %>
+        <li><%= link_to "#{review.product.name}", product_path(review.product.id) %>
         - <%= review.difficulty_rating %></li>
         <% end %>
       </ul>
     </div>
   </section>
 </section>
-
