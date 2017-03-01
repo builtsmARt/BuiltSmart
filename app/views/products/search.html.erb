@@ -1,14 +1,14 @@
 <section class="padding-top container">
   <div class="all-products">
-    <h3>All manuals</h3>
+    <h3>Search Results</h3>
     <div class="product-results">
       <% @products.each do |product| %>
         <div class="product-item">
           <h1><%=product.name%></h1>
           <p><%=product.title%></p>
           <%= link_to image_tag(product.image_url, :alt= => "No image available"), product_path(product.id) %>
-          <%= link_to "Product Details", product_path(product.id) %>
-          </div>
+          <a class="product-link" href="<%=product_path(product.id) %>">Product Details</a>
+        </div>
       <% end %>
     </div>
   </div>
