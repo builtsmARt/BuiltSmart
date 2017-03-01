@@ -1,6 +1,6 @@
 <section class="standard-form container">
   <%= render partial: "partials/errors"%>
-  <%= form_for @user do  |f| %>
+  <%= form_for :html => {:id => "signUpForm"} @user do  |f| %>
     <h3>Sign Up</h3>
     <%= f.text_field :full_name, placeholder: "Full Name" %>
     <%= f.email_field :email, placeholder: "Email" %>
@@ -8,3 +8,7 @@
     <%= f.submit "Sign Up", :id => "btnSignup" %>
   <%end%>
 </section>
+
+<script type="text/javascript">
+
+</script>

@@ -1,9 +1,14 @@
 <div class="standard-form container">
   <h3>Log In</h3>
   <%= render partial: "partials/errors" %>
-  <%= form_for(:session, url: login_path) do  |f| %>
+  <%= form_for(:session, url: login_path, :html => {:id => "loginForm"}) do  |f| %>
     <%= f.email_field :email, placeholder: "Email" %>
     <%= f.password_field :password, placeholder: "Password" %>
+    <input id="uid" type="hidden" name="session[firebase_uid]" value="">
     <%= f.submit "Log In", id: "btnLogin" %>
   <% end %>
 </div>
+
+<script type="text/javascript">
+
+</script>

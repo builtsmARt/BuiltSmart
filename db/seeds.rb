@@ -3,9 +3,12 @@ Product.destroy_all
 Bookmark.destroy_all
 Review.destroy_all
 
-kane = User.create(full_name: "Kane", email: "k@k.com", password: "a")
-tony = User.create(full_name:"Tony", email: "t@t.com", password: "a")
-bob = User.create(full_name:"Bob", email: "b@b.com", password: "a")
+kendy = User.create(full_name: "Kendy Ng", email: "kendy@gmail.com", password: "password", uid: "DDIWXPk2kMSvy7oXL9EbfLGadaz2")
+
+tony = User.create(full_name:"Tony Lam", email: "tony@gmail.com", password: "password", uid: "VDHChLEEuvaI76uGvRNiwj6kNML2")
+
+kane = User.create(full_name:"Kane Lee", email: "kane.lee@gmail.com", password: "password", uid: "VDHChLEEuvaI76uGvRNiwj6kNML2")
+
 chair = Product.create(title:"Invisible Chair")
 tony.bookmarks.create(product_id: 1)
 tony.reviews.create(review:"This was a very difficult product to build. I sure wish I had been able to use BuiltSmart when I was putting it together! It broke but I had lost the manual and thought I would have to throw it away. Thanks to BuiltSmart I found the materials I need it to fix up my favorite chair!", difficulty_rating: "5", product_id: 1)
