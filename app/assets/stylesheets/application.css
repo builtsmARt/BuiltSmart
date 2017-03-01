@@ -10,8 +10,17 @@ h1.product-name {
   font-size: 50px;
 }
 
+p.product-title {
+  font-style: italic;
+}
 .upc-manual-list {
   margin: 20px;
+}
+
+.product-image {
+  margin-right: auto;
+  margin-left: auto;
+  width: 400px;
 }
 
 body, html {

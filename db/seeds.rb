@@ -10,9 +10,10 @@ Product.create(
 name: "Norberg",
 UPC: "608938304360",
 ASIN: "B0050S7CK8",
-model: "8789",
+model: "301.805.04",
 brand: "Ikea",
 title: "Ikea Wall-Mounted Drop-leaf Folding Table",
+pdf_url: "http://www.ikea.com/us/en/assembly_instructions/norberg-wall-mounted-drop-leaf-table__AA-500128-6_pub.pdf",
 image_url: "http://www.ikea.com/us/en/images/products/norberg-wall-mounted-drop-leaf-table-white__0120123_PE276553_S4.JPG", description: "Table top/ Top rail: Particleboard, ABS plastic, Laminate (melamine foil)
 Underframe/ Mounting plate: Steel, Epoxy/polyester powder coating
 Plastic parts: Reinforced polyamide, Polyethylene, Polypropylene

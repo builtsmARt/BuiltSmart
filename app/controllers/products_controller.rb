@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
     end
 
     def search
-      @products = Product.where('title LIKE ?', "%#{params[:search]}%").all
+      @products = Product.where('name, title, description LIKE ?, ?, ?', "%#{params[:search]}%").all
       render '/products/search'
     end
 

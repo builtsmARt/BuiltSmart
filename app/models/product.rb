@@ -40,7 +40,7 @@ class Product < ApplicationRecord
     self.image_url = "http://www.ikea.com#{photo_path}"
 
     pdf_path=all_content.css("div[class='rowContainer']").last.css("div")[1].children[1].attributes['href'].value
-    self.pdf_url="https://docs.google.com/gview?url=http://www.ikea.com#{pdf_path}%>&embedded=true"
+    self.pdf_url="https://docs.google.com/gview?url=http://www.ikea.com#{pdf_path}&embedded=true"
 
   end
 
