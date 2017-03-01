@@ -1,5 +1,6 @@
 class BookmarksController < ApplicationController
   def index
+    require_user
     @bookmarks = current_user.bookmarks
   end
 

@@ -25,6 +25,7 @@ class ReviewsController < ApplicationController
     end
 
     def edit
+      require_user
       find_product
       @review = @product.reviews.find_by(id: params[:id])
       authorize(@review.user_id)

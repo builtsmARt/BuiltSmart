@@ -1,21 +1,15 @@
 <section class="padding-top container">
   <div class="all-products">
-    <h3>Search Result</h3>
+    <h3>Search Results</h3>
     <div class="product-results">
-      <% @products.each do |product|%>
+      <% @products.each do |product| %>
         <div class="product-item">
-
-        <h1 class="product-name">
-          <%=product.name%>
-        </h1>
-        <img src="<%=product.image_url%>" alt=""><br>
-        <%= link_to "Product Details", product_path(product.id) %><br><br>
-          </div>
-
-          <%= link_to "#{product.title}" , product_path(product.id) %>
+          <h1><%=product.name%></h1>
+          <p><%=product.title%></p>
+          <%= link_to image_tag(product.image_url, :alt= => "No image available"), product_path(product.id) %>
+          <a class="product-link" href="<%=product_path(product.id) %>">Product Details</a>
         </div>
-
       <% end %>
-      </div>
+    </div>
   </div>
 </section>

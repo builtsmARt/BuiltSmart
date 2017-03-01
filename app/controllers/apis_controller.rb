@@ -2,7 +2,7 @@ class ApisController < ApplicationController
   def bookmarks
    @bookmarks = Bookmark.all
    render json: @bookmarks
- end
+  end
 
  def user_bookmarks
    @user_bookmarks = User.find_by_id(params[:id]).bookmarks
@@ -17,14 +17,6 @@ class ApisController < ApplicationController
  def products
    @products = Product.all
    render json: { results: @products }
- end
-
- def upc_search(query)
-   root="https://api.upcitemdb.com/prod/trial/lookup?upc=#{query}"
-   response = Net::HTTP.get(URI(root))
-   parsed_response = JSON.parse(response)["items"][0]
-   @item_info={results: parsed_response}
-   render json: @item_info
  end
 
  def users

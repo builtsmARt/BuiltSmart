@@ -13,8 +13,4 @@ class ProductsController < ApplicationController
       render '/products/search'
     end
 
-    def upcsearch
-      upc_api(params[:upcsearch])
-      render '/products/upcsearch'
-    end
 end
