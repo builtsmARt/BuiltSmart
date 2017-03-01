@@ -10,7 +10,7 @@
       <ul>
         <%@user.products.each do |product|%>
         <li><%=link_to "#{product.name}", product_url(product.id)%></li>
-        <br><a href="#{product.pdf_url}">Click for PDF Direction</a>
+        <a href="#{product.pdf_url}">Click for PDF Directions</a><br><br>
         <%end%>
       </ul>
     </div>

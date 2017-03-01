@@ -4,9 +4,11 @@
     <div class="product-results">
       <% @products.each do |product| %>
         <div class="product-item">
-          <%= link_to "#{product.name}", product_path(product.id) %><br>
-          <%=product.image_url%><br>
-          <%=product.title%>
+        <h1 class="product-name">
+          <%=product.name%>
+        </h1>
+        <img src="<%=product.image_url%>" alt=""><br>
+        <%= link_to "Product Details", product_path(product.id) %><br><br>
           </div>
       <% end %>
   </div>
