@@ -3,11 +3,11 @@ Product.destroy_all
 Bookmark.destroy_all
 Review.destroy_all
 
-kendy = User.create(full_name: "Kendy Ng", email: "kendy@gmail.com", password: "password", uid: "DDIWXPk2kMSvy7oXL9EbfLGadaz2")
+kendy = User.create(full_name: "Kendy Ng", email: "kendy@gmail.com", password: "password", firebase_uid: "DDIWXPk2kMSvy7oXL9EbfLGadaz2")
 
-tony = User.create(full_name:"Tony Lam", email: "tony@gmail.com", password: "password", uid: "VDHChLEEuvaI76uGvRNiwj6kNML2")
+tony = User.create(full_name:"Tony Lam", email: "tony@gmail.com", password: "password", firebase_uid: "VDHChLEEuvaI76uGvRNiwj6kNML2")
 
-kane = User.create(full_name:"Kane Lee", email: "kane.lee@gmail.com", password: "password", uid: "VDHChLEEuvaI76uGvRNiwj6kNML2")
+kane = User.create(full_name:"Kane Lee", email: "kane.lee@gmail.com", password: "password", firebase_uid: "VDHChLEEuvaI76uGvRNiwj6kNML2")
 
 chair = Product.create(title:"Invisible Chair")
 tony.bookmarks.create(product_id: 1)
