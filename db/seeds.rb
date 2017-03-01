@@ -2,7 +2,7 @@ User.destroy_all
 Product.destroy_all
 Bookmark.destroy_all
 Review.destroy_all
-
+kendy = User.create(full_name:"Kendy", email: "k@ng.com", password: "a")
 kane = User.create(full_name: "Kane", email: "k@k.com", password: "a")
 tony = User.create(full_name:"Tony", email: "t@t.com", password: "a")
 bob = User.create(full_name:"Bob", email: "b@b.com", password: "a")
@@ -33,6 +33,4 @@ ikea_article_numbers.each do |article_number|
   ikea_product.save
 end
 
-# Product.create(
-# UPC: , EAN: , ASIN: , model: ,brand: "", title: "", barcode_link: "", description: "")
-# )
+tony.bookmarks.create(product_id: 2)
