@@ -19,10 +19,14 @@
       <h3>Reviews and Ratings</h3>
       <ul>
         <% @user.reviews.each do |review| %>
-        <li><%= link_to "#{review.product.name}", product_path(review.product.id) %>
+        <li><%= link_to "#{review.product.title}", product_path(review.product.id) %>
         - <%= review.difficulty_rating %></li>
         <% end %>
       </ul>
     </div>
   </section>
 </section>
+
+<h2>Ikea Product</h2>
+<%=@product.product_name %>
+<a href="https://docs.google.com/gview?url=http://www.ikea.com<%=@product.pdf_path%>&embedded=true">Assembly Instructions</a>
