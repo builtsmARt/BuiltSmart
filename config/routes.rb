@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
    get '/products/search', to: 'products#search', as: 'search'
-   get '/products/upcsearch', to: 'products#upcsearch', as: 'upcsearch'
     resources :users, only: [:new, :create, :show]
     resources :bookmarks, only: [:index, :create, :destroy, ]
     resources :products, only: [:index, :show] do

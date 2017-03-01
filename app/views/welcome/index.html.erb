@@ -33,12 +33,5 @@
       </div>
     </div>
 
-    <div class="upc-search">
-      <h3>Try it out!</h3>
-      <h3>Search our database of manuals.</h3>
-      <%= form_tag upcsearch_path, :method => "get", id: "upcsearch-form" do %>
-        <%= text_field_tag :upcsearch, params[:upcsearch], placeholder: "Search furniture by UPC", id: "upcsearch" %>
-      <% end %>
-    </div>
   </section>
 </section>
