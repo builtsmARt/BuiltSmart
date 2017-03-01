@@ -4,7 +4,7 @@
   <%= form_for(:session, url: login_path, :html => {:id => "loginForm"}) do  |f| %>
     <%= f.email_field :email, placeholder: "Email" %>
     <%= f.password_field :password, placeholder: "Password" %>
-    <input id="uid" type="hidden" name="session[firebase_uid]" value="">
+    <input id="uid" type="hidden" name="session[firebase_uid]">
     <%= f.submit "Log In", id: "btnLogin" %>
   <% end %>
 </div>
@@ -12,18 +12,19 @@
 <script type="text/javascript">
   $(document).ready(function() {
 
-    var config = {
-      apiKey: "AIzaSyBeRU9US2IBEQuXLMMv8rqbGdhOfJ-Yc-E",
-      authDomain: "ibuilt-fdc16.firebaseapp.com",
-      databaseURL: "https://ibuilt-fdc16.firebaseio.com",
-      storageBucket: "ibuilt-fdc16.appspot.com",
-      messagingSenderId: "711394388600"
-    };
-
-    firebase.initializeApp(config);
 
     $("#loginForm").on('submit', function(e) {
       e.preventDefault();
+
+      var config = {
+        apiKey: "AIzaSyBeRU9US2IBEQuXLMMv8rqbGdhOfJ-Yc-E",
+        authDomain: "ibuilt-fdc16.firebaseapp.com",
+        databaseURL: "https://ibuilt-fdc16.firebaseio.com",
+        storageBucket: "ibuilt-fdc16.appspot.com",
+        messagingSenderId: "711394388600"
+      };
+
+      firebase.initializeApp(config);
 
       var email =  $("#session_email").val(),
           password = $("#session_password").val();

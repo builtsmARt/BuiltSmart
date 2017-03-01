@@ -5,10 +5,58 @@
     <%= f.text_field :full_name, placeholder: "Full Name" %>
     <%= f.email_field :email, placeholder: "Email" %>
     <%= f.password_field :password, placeholder: "Password" %>
+    <input id="uid" type="hidden" name="user[firebase_uid]">
     <%= f.submit "Sign Up", :id => "btnSignup" %>
   <%end%>
 </section>
 
 <script type="text/javascript">
+$(document).ready(function() {
 
+    $("#signUpForm").on('submit', function(e) {
+        e.preventDefault();
+
+
+        var config = {
+          apiKey: "AIzaSyBeRU9US2IBEQuXLMMv8rqbGdhOfJ-Yc-E",
+          authDomain: "ibuilt-fdc16.firebaseapp.com",
+          databaseURL: "https://ibuilt-fdc16.firebaseio.com",
+          storageBucket: "ibuilt-fdc16.appspot.com",
+          messagingSenderId: "711394388600"
+        };
+
+        firebase.initializeApp(config);
+
+        var email =  $("#user_email").val(),
+            password = $("#user_password").val();
+
+        var auth = firebase.auth();
+
+        var promise = auth.createUserWithEmailAndPassword(email, password);
+
+        promise.catch(function(e) {
+          console.log(e.message);
+        });
+
+        promise
+          .then(function(user) {
+            console.log(user);
+          })
+          .catch(function(e) {
+            console.log(e.message);
+          });
+
+      firebase.auth().onAuthStateChanged(firebaseUser => {
+        if (firebaseUser) {
+          console.log(firebaseUser);
+          $("#uid").val(firebaseUser.uid);
+          $("#signUpForm").unbind('submit').submit();
+        } else {
+          console.log('not registered');
+        }
+      });
+
+    })
+
+  });
 </script>
