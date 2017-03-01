@@ -7,7 +7,8 @@
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -20,7 +21,7 @@
       <span class="brand">
         <a href="/">builtsm<span>AR</span>t</a>
       </span>
-      
+
       <span class="nav-links">
         <%= form_tag search_path, :method => "get", id: "search-form" do %>
           <%= text_field_tag :search, params[:search], placeholder: "Search furniture manuals", id: "search" %>
@@ -30,9 +31,9 @@
         <% if login? %>
           <span class="nav-links">
            <%= link_to 'Logout', session_path(current_user),
-           method: :delete %>
+           method: :delete, id: "btnLogout" %>
           </span>
-          
+
           <span class="nav-links">
            <%= link_to 'Profile', user_path(current_user) %>
           </span>
@@ -40,32 +41,32 @@
           <span class="nav-links">
            <%= link_to 'Login', login_path %>
           </span>
-          
+
           <span class="nav-links">
            <%= link_to 'Sign Up', new_user_path %>
           </span>
         <% end %>
-      
+
       <span class="nav-links">
       <%=link_to 'Browse Manuals', products_path %>
       </span>
-      
+
       <!-- mobile -->
-    
+
       <span class="m-nav-links">
         <%= form_tag search_path, :method => "get", id: "search-form" do %>
           <%= text_field_tag :search, params[:search], placeholder: "Search furniture manuals", id: "search" %>
           <i class="fa fa-search" aria-hidden="true"></i>
         <% end %>
       </span>
-      
+
       <section class="mobile-nav">
         <% if login? %>
           <span class="m-nav-links">
            <%= link_to 'Logout', session_path(current_user),
            method: :delete %>
           </span>
-          
+
           <span class="m-nav-links">
            <%= link_to 'Profile', user_path(current_user) %>
           </span>
@@ -73,22 +74,22 @@
           <span class="m-nav-links">
            <%= link_to 'Login', login_path %>
           </span>
-          
+
           <span class="m-nav-links">
            <%= link_to 'Sign Up', new_user_path %>
           </span>
         <% end %>
-      
+
         <span class="m-nav-links">
         <%=link_to 'Browse Manuals', products_path %>
         </span>
       </section>
-    
+
     </div>
   </nav>
 
     <%= yield %>
-    
+
     <footer class="">
       <div class="container">
         <section class="contacts paddings">
@@ -97,7 +98,7 @@
               <a href="/">builtsm<span>AR</span>t</a>
             </span>
             <p class="brand-message">buildsmARt is the leader in Enterprise Augmented Reality Solutions.</p>
-          </div> 
+          </div>
           <div>
             <ul>
               <li class="f-nav-heading">Navigation</li>
@@ -106,7 +107,7 @@
               <li><a href="">Login</a></li>
               <li><a href="">Sign Up</a></li>
             </ul>
-          </div>  
+          </div>
           <div>
             <ul>
               <li class="f-contacts-heading">Contact Us</li>
@@ -115,9 +116,9 @@
               <li><a href="">info@builtsmARt.com</a></li>
               <li><a href="">212 123 4567</a></li>
             </ul>
-          </div>  
+          </div>
         </section>
-        
+
         <section class="legal">
           <span>©2017 buildsmARt, Inc.</span>
           <span>Privacy Policy</span>

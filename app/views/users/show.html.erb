@@ -10,15 +10,12 @@
       <ul>
         <%@user.products.each do |product|%>
 
-        <li><%=link_to "#{product.name}", product_url(product.id)%></li>
-        <a href="#{product.pdf_url}">Click for PDF Directions</a><br><br>
-
         <li><%=link_to "#{product.title}", product_url(product.id)%></li>
 
         <%end%>
       </ul>
     </div>
-  
+
     <div class="user-reviews">
       <h3>Reviews and Ratings</h3>
       <ul>
@@ -30,4 +27,3 @@
     </div>
   </section>
 </section>
-
