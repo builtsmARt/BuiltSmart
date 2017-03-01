@@ -3,13 +3,18 @@
     <h1><%=@user.full_name.capitalize%>'s Profile Page</h1>
 
   <div class="ar-link">
-    <a href="ibuiltbanner://">Use AR with our app!</a><br/>
+    <a href="BS_Demo_App://">Use AR with our app!</a><br/>
   </div>
     <div class="user-bookmarks">
       <h3>Bookmarks</h3>
       <ul>
         <%@user.products.each do |product|%>
+
+        <li><%=link_to "#{product.name}", product_url(product.id)%></li>
+        <a href="#{product.pdf_url}">Click for PDF Directions</a><br><br>
+
         <li><%=link_to "#{product.title}", product_url(product.id)%></li>
+
         <%end%>
       </ul>
     </div>
