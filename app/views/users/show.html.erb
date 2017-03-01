@@ -9,7 +9,8 @@
       <h3>Bookmarks</h3>
       <ul>
         <%@user.products.each do |product|%>
-        <li><%=link_to "#{product.title}", product_url(product.id)%></li>
+        <li><%=link_to "#{product.name}", product_url(product.id)%></li>
+        <a href="#{product.pdf_url}">Click for PDF Directions</a><br><br>
         <%end%>
       </ul>
     </div>

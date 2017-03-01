@@ -14,20 +14,18 @@ Product.create(
 name: "Norberg",
 UPC: "608938304360",
 ASIN: "B0050S7CK8",
-model: "8789",
+model: "301.805.04",
 brand: "Ikea",
 title: "Ikea Wall-Mounted Drop-leaf Folding Table",
-image_url: "http://ecx.images-amazon.com/images/I/31l5jdtVgPL._SL160_.jpg", description: "Folds flat; saves space when not in use. - Solid wood, a hardwearing natural material. - Seats 2."
+pdf_url: "http://www.ikea.com/us/en/assembly_instructions/norberg-wall-mounted-drop-leaf-table__AA-500128-6_pub.pdf",
+image_url: "http://www.ikea.com/us/en/images/products/norberg-wall-mounted-drop-leaf-table-white__0120123_PE276553_S4.JPG", description: "Table top/ Top rail: Particleboard, ABS plastic, Laminate (melamine foil)
+Underframe/ Mounting plate: Steel, Epoxy/polyester powder coating
+Plastic parts: Reinforced polyamide, Polyethylene, Polypropylene
+Spring: Stainless steel
+Pin: Steel"
 )
 
-upc_numbers=['078608002382', '608938304360', '611230124536', '609613408076', '740016860631', '2171339330']
-upc_numbers.each do |upc|
-  product = Product.new
-  product.create_upc_product(upc)
-  product.save
-end
-
-ikea_article_numbers = ["30180504","20297646", "10308773","S29007850", "S79129608", ]
+ikea_article_numbers = ["20297646", "10308773","S29007850", "S79129608", "S09149737", "50353160", "20279888", "40216531", "90144730", "60239715", "10228620", "70239710", "S29103597", "40297966", "10297958", "10332075", "S59139689", "30069762", "50290281", "S29898342", "50288042", "10259046", "90258156", "80237225", "30257598", "S59874504", "30333804", "80321380", "30103676", "50244741", "10119206", "60312292", "80248525", "00099789"]
 
 ikea_article_numbers.each do |article_number|
   ikea_product = IkeaProduct.new
