@@ -11,15 +11,4 @@ module ProductsHelper
     # @product = Product.new(title: parsed_response["title"])
   end
 
-  def ikea_scraper(article_number)
-    html_file = open("http://www.ikea.com/us/en/catalog/products/#{article_number}/")
-    nokogiri_document = Nokogiri.parse(html_file)
-    body_node = nokogiri_document.children.last
-    all_content = body_node.css("div[id='allContent']")
-    @product_name =all_content.css("div#name").text
-    @photo_path = all_content.css("img#productImg")[0]['src']
-    @article_num = all_content.css("div[class='rowContainer']").last.css("div[class='colArticle']").text
-    @pdf_path=all_content.css("div[class='rowContainer']").last.css("div")[1].children[1].attributes['href'].value
-  end
-
 end

@@ -1,9 +1,6 @@
 <section class="padding-top container">
   <section class="manual-show">
-      <h1><%=@product.name%></h1>
-      <p class="product-model"><%=@product.model%></p>
-      <p><%=@product.title%></p>
-
+      <h1><%=@product.title%></h1>
       <div class="bookmark">
         <%if current_user%>
           <% if bookmark?(params[:id]) %>
@@ -13,7 +10,6 @@
           <%end%>
         <%end%>
       </div>
-
       <div class="product-info">
         <h3>Product details:</h3>
           <%if @product.image_url%>
@@ -23,10 +19,9 @@
           <%end%>
         <p><%=@product.description%></p>
       </div>
+      
       <br>
-      <p>Scroll down for PDF</p>
       <br>
-        <p><%=@product.pdf_url%></p>
       <div class="all-reviews-container">
         <%= render partial: "reviews/index", locals: {product: @product}%>
       </div>
@@ -41,3 +36,4 @@
       </div>
   </section>
 </section>
+
