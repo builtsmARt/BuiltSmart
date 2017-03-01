@@ -1,6 +1,12 @@
 <section class="padding-top container">
   <section class="manual-show">
+
+      <h1 class="product-name"> <%=@product.name%></h1>
+      <p class="product-title"> <%=@product.title%></p>
+      <p class="product-model"> <%=@product.model%></p>
+
       <h1><%=@product.title%></h1>
+
       <div class="bookmark">
         <%if current_user%>
           <% if bookmark?(params[:id]) %>
@@ -11,17 +17,26 @@
         <%end%>
       </div>
       <div class="product-info">
-        <h3>Product details:</h3>
           <%if @product.image_url%>
             <div class="product-image">
               <img src= <%=@product.image_url%> alt="No Product Image Available">
             </div>
           <%end%>
+          <h3>Product details:</h3>
         <p><%=@product.description%></p>
       </div>
       
       <br>
+
+      <p>Scroll down for PDF assembly instructions & product reviews</p>
       <br>
+        <iframe src="<%=@product.pdf_url%>"
+          width="100%" height="800" >
+          <p>Your browser does not support iframes.</p>
+        </iframe>
+
+      <br>
+
       <div class="all-reviews-container">
         <%= render partial: "reviews/index", locals: {product: @product}%>
       </div>

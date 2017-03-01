@@ -6,6 +6,23 @@
   padding: 0;
 }
 
+h1.product-name {
+  font-size: 50px;
+}
+
+p.product-title {
+  font-style: italic;
+}
+.upc-manual-list {
+  margin: 20px;
+}
+
+.product-image {
+  margin-right: auto;
+  margin-left: auto;
+  width: 400px;
+}
+
 body, html {
   height: 100%;
   width: 100%;
@@ -484,12 +501,20 @@ footer .legal span {
   margin-top: 20px;
 }
 
+.ar-link {
+  display: none;
+}
+
 /* mobile webiste - iphone 6 plus size only */
 
 @media only screen
   and (min-device-width: 414px)
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 3) {
+
+  .ar-link {
+    display: block;
+  }
 
   .container {
     width: 400px;
@@ -574,6 +599,10 @@ footer .legal span {
   and (max-device-width: 413px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
+  .ar-link {
+    display: block;
+  }
+
   .container {
     width: 375px;
     margin: 0px;
@@ -657,6 +686,10 @@ footer .legal span {
   and (max-device-width: 370px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
+  .ar-link {
+    display: block;
+  }
+
     .container {
     width: 320px;
     margin: 0px;
@@ -673,7 +706,7 @@ footer .legal span {
   .intro .title {
     width: 320px;
   }
-  
+
   footer .contacts div {
     width: 320px;
     margin: 0 auto;
