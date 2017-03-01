@@ -10,5 +10,41 @@
 </div>
 
 <script type="text/javascript">
+  $(document).ready(function() {
 
+    var config = {
+      apiKey: "AIzaSyBeRU9US2IBEQuXLMMv8rqbGdhOfJ-Yc-E",
+      authDomain: "ibuilt-fdc16.firebaseapp.com",
+      databaseURL: "https://ibuilt-fdc16.firebaseio.com",
+      storageBucket: "ibuilt-fdc16.appspot.com",
+      messagingSenderId: "711394388600"
+    };
+
+    firebase.initializeApp(config);
+
+    $("#loginForm").on('submit', function(e) {
+      e.preventDefault();
+
+      var email =  $("#session_email").val(),
+          password = $("#session_password").val();
+
+      var auth = firebase.auth();
+
+      var promise = auth.signInWithEmailAndPassword(email, password);
+
+      promise.catch(function(e) {
+        console.log(e.message);
+      });
+
+      firebase.auth().onAuthStateChanged(firebaseUser => {
+        if (firebaseUser) {
+          console.log(firebaseUser);
+          $("#uid").val(firebaseUser.uid);
+          $("#loginForm").unbind('submit').submit();
+        } else {
+          console.log('not logged in');
+        }
+      });
+    })
+  });
 </script>
