@@ -78,20 +78,23 @@ $(document).ready(function() {
   // find logout button, and attach event listener click.
   // signout user
   $("#btnLogout").on('click', function(e) {
+    // $.ajax({
+    //   url: "/sessions/logout",
+    //   method: "get"
+    // });
     firebase.auth().signout();
   });
 
   // checks if user is logined or logout
   firebase.auth().onAuthStateChanged(firebaseUser => {
       if (firebaseUser) {
-        // debugger;
         console.log(firebaseUser);
-        // btnLogout.show()
-        // btnSignup.hide()
-        // btnLogin.hide()
+        // $.ajax({
+        //   url: "/sessions/login",
+        //   method: "post",
+        //   data: {user_id: firebaseUser.uid}
+        // });
       } else {
-        // btnLogout.hide()
-        // debugger;
         console.log('not logged in');
       }
     });

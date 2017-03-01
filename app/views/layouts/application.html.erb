@@ -31,7 +31,7 @@
         <% if login? %>
           <span class="nav-links">
            <%= link_to 'Logout', session_path(current_user),
-           method: :delete %>
+           method: :delete, id: "btnLogout" %>
           </span>
 
           <span class="nav-links">
