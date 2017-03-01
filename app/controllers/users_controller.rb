@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 
     def show
       require_user
+      authorize(params[:id])
       @user = User.find_by_id(params[:id])
     end
 

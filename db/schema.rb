@@ -24,30 +24,16 @@ ActiveRecord::Schema.define(version: 20170301201400) do
     t.index ["user_id"], name: "index_bookmarks_on_user_id", using: :btree
   end
 
-  create_table "ikea_products", force: :cascade do |t|
-    t.string   "product_name"
-    t.string   "photo_path"
-    t.string   "article_num"
-    t.string   "pdf_path"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
   create_table "products", force: :cascade do |t|
-    t.string   "brand"
+    t.string   "name"
     t.string   "title"
-    t.string   "barcode_link"
-    t.string   "EAN"
-    t.string   "UPC"
-    t.string   "ASIN"
     t.string   "model"
-    t.text     "description"
-    t.boolean  "has_ar",       default: false
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
     t.string   "image_url"
     t.string   "pdf_url"
-    t.string   "name"
+    t.text     "description"
+    t.boolean  "has_ar",      default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "reviews", force: :cascade do |t|
