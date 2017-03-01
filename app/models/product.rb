@@ -43,6 +43,4 @@ class Product < ApplicationRecord
     self.pdf_url="https://docs.google.com/gview?url=http://www.ikea.com#{pdf_path}&embedded=true"
 
   end
-
-
 end
