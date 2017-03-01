@@ -2,6 +2,7 @@ User.destroy_all
 Product.destroy_all
 Bookmark.destroy_all
 Review.destroy_all
+leila = User.create(full_name:"leile", email:"l@l.com", password: "a")
 kendy = User.create(full_name:"Kendy", email: "k@ng.com", password: "a")
 kane = User.create(full_name: "Kane", email: "k@k.com", password: "a")
 tony = User.create(full_name:"Tony", email: "t@t.com", password: "a")
