@@ -2,6 +2,7 @@
   <p class="review"><%=review.review%></p>
   <p class="difficult">Difficulty Rating:<span><%= review.difficulty_rating %></span></p>
   <p class="reviewer">Reviewed by <%= review.user.full_name %> on <%= review.created_at.to_datetime.in_time_zone("Central Time (US & Canada)").strftime("%A, %d %b %Y") %></p>
+
   <div class="edit-review">
     <%if current_user%>
       <% if authorized?(review.user_id)%>
@@ -14,4 +15,5 @@
       <%end %>
     <%end%>
   </div>
+
  </div>

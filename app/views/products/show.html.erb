@@ -1,8 +1,13 @@
 <section class="padding-top container">
+
   <section class="manual-show">
-    <h1> <%=@product.name%></h1>
-    <p class="product-title"> <%=@product.title%></p>
-    <p class="product-model"> <%=@product.model%></p>
+
+    <div class="product-heading">
+      <h1> <%=@product.name%></h1>
+      <p class="product-title"> <%=@product.title%></p>
+      <p class="product-model"> <%=@product.model%></p>
+    </div>
+
     <div class="bookmark">
       <%if current_user%>
         <% if bookmark?(params[:id]) %>
@@ -12,6 +17,7 @@
         <%end%>
       <%end%>
     </div>
+
     <div class="product-info">
         <%if @product.image_url%>
           <div class="product-image">
@@ -21,16 +27,19 @@
         <h3 class="title">Product details:</h3>
       <p><%=@product.description%></p>
     </div>
-      <br>
-      <br>
-        <iframe src="<%=@product.pdf_url%>"
-          width="100%" height="800" >
-          <p>Your browser does not support iframes.</p>
-        </iframe>
-      <br>
+
+    <div class="pdf">
+      <h3 class="title">Assembly Instructions</h3>
+      <iframe src="<%=@product.pdf_url%>"
+        width="100%" height="800" >
+        <p>Your browser does not support iframes.</p>
+      </iframe>
+    </div>
+
       <div class="all-reviews-container">
         <%= render partial: "reviews/index", locals: {product: @product}%>
       </div>
+
       <div class="new-review-form">
         <%if current_user%>
           <%if review?(params[:id])%>
@@ -40,5 +49,7 @@
           <%end%>
         <%end%>
       </div>
+
   </section>
+
 </section>

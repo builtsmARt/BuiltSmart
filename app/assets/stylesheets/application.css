@@ -11,6 +11,9 @@ p.product-title {
   padding-bottom: 5px;
 }
 
+.pdf {
+  margin: 40px 20px;
+}
 .product-image {
   margin-right: auto;
   margin-left: auto;
@@ -294,10 +297,7 @@ footer .legal span {
   text-align: center;
 }
 
-.title {
-  font-weight:bold;
-  font-size: 28px;
-}
+
 /* manual browse */
 .all-products {
   padding-bottom: 50px;
@@ -308,6 +308,10 @@ footer .legal span {
   border-bottom: 1px solid #444;
 }
 
+manual-show.title {
+  font-weight:bold;
+  font-size: 28px;
+}
 .product-results {
   margin: 20px 0px;
 }
@@ -340,7 +344,6 @@ footer .legal span {
 }
 
 .manual-show h1 {
-  padding: 10px 0px 5px 0px;
   font-size: 50px;
 }
 
@@ -348,9 +351,15 @@ footer .legal span {
   padding: 20px 0px;
 }
 
-.manual-show .product-model {
-  padding-bottom: 30px;
+.manual-show .title {
+  font-weight:bold;
+  font-size: 28px;
 }
+
+.manual-show .product-heading {
+    padding: 10px 0px 30px 0px;
+}
+
 .manual-show .all-reviews-container .one-review p {
   padding-bottom: 10px;
 }
