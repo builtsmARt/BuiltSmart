@@ -23,7 +23,7 @@ Pin: Steel"
 tony.bookmarks.create(product_id: 1)
 tony.reviews.create(review:"This was a very difficult product to build. I sure wish I had been able to use BuiltSmart when I was putting it together! It broke but I had lost the manual and thought I would have to throw it away. Thanks to BuiltSmart I found the materials I need it to fix up my favorite chair!", difficulty_rating: "5", product_id: 1)
 
-ikea_article_numbers = ["20297646", "10308773","S29007850", "S79129608", "S09149737", "50353160", "20279888", "40216531", "90144730", "60239715", "10228620", "70239710", "S29103597", "40297966", "10297958", "10332075", "S59139689", "30069762", "50290281", "S29898342", "50288042", "10259046"]
+ikea_article_numbers = ["20297646", "10308773","S29007850", "S79129608", "S09149737", "50353160", "20279888", "40216531", "90144730", "60239715", "10228620", "70239710", "S29103597", "40297966", "10297958", "10332075", "S59139689", "30069762", "50290281", "S29898342", "50288042", "10259046", "90258156", "80237225", "30257598", "S59874504", "30333804", "80321380", "30103676", "50244741", "10119206", "60312292", "80248525", "00099789"]
 
 ikea_article_numbers.each do |article_number|
   ikea_product = Product.new
