@@ -9,20 +9,25 @@
       <h3>Bookmarks</h3>
       <ul>
         <%@user.products.each do |product|%>
+
         <li><%=link_to "#{product.name}", product_url(product.id)%></li>
         <a href="#{product.pdf_url}">Click for PDF Directions</a><br><br>
+
+        <li><%=link_to "#{product.title}", product_url(product.id)%></li>
+
         <%end%>
       </ul>
     </div>
-
+  
     <div class="user-reviews">
       <h3>Reviews and Ratings</h3>
       <ul>
         <% @user.reviews.each do |review| %>
-        <li><%= link_to "#{review.product.name}", product_path(review.product.id) %>
+        <li><%= link_to "#{review.product.title}", product_path(review.product.id) %>
         - <%= review.difficulty_rating %></li>
         <% end %>
       </ul>
     </div>
   </section>
 </section>
+
