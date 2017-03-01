@@ -1,9 +1,51 @@
 <div class="standard-form container">
   <h3>Log In</h3>
   <%= render partial: "partials/errors" %>
-  <%= form_for(:session, url: login_path) do  |f| %>
+  <%= form_for(:session, url: login_path, :html => {:id => "loginForm"}) do  |f| %>
     <%= f.email_field :email, placeholder: "Email" %>
     <%= f.password_field :password, placeholder: "Password" %>
-    <%= f.submit "Log In" %>
+    <input id="uid" type="hidden" name="session[firebase_uid]">
+    <%= f.submit "Log In", id: "btnLogin" %>
   <% end %>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+
+
+    $("#loginForm").on('submit', function(e) {
+      e.preventDefault();
+
+      var config = {
+        apiKey: "AIzaSyBeRU9US2IBEQuXLMMv8rqbGdhOfJ-Yc-E",
+        authDomain: "ibuilt-fdc16.firebaseapp.com",
+        databaseURL: "https://ibuilt-fdc16.firebaseio.com",
+        storageBucket: "ibuilt-fdc16.appspot.com",
+        messagingSenderId: "711394388600"
+      };
+
+      firebase.initializeApp(config);
+
+      var email =  $("#session_email").val(),
+          password = $("#session_password").val();
+
+      var auth = firebase.auth();
+
+      var promise = auth.signInWithEmailAndPassword(email, password);
+
+      promise.catch(function(e) {
+        console.log(e.message);
+      });
+
+      firebase.auth().onAuthStateChanged(firebaseUser => {
+        if (firebaseUser) {
+          console.log(firebaseUser);
+          $("#uid").val(firebaseUser.uid);
+          $("#loginForm").unbind('submit').submit();
+        } else {
+          console.log('not logged in');
+        }
+      });
+    })
+  });
+</script>
