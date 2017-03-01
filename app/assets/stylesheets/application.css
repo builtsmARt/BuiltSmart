@@ -6,15 +6,9 @@
   padding: 0;
 }
 
-h1.product-name {
-  font-size: 50px;
-}
-
 p.product-title {
   font-style: italic;
-}
-.upc-manual-list {
-  margin: 20px;
+  padding-bottom: 5px;
 }
 
 .product-image {
@@ -300,6 +294,10 @@ footer .legal span {
   text-align: center;
 }
 
+.title {
+  font-weight:bold;
+  font-size: 28px;
+}
 /* manual browse */
 .all-products {
   padding-bottom: 50px;
@@ -342,13 +340,17 @@ footer .legal span {
 }
 
 .manual-show h1 {
-  padding: 0px 0px 20px;
+  padding: 10px 0px 5px 0px;
+  font-size: 50px;
 }
 
 .manual-show h3 {
   padding: 20px 0px;
 }
 
+.manual-show .product-model {
+  padding-bottom: 30px;
+}
 .manual-show .all-reviews-container .one-review p {
   padding-bottom: 10px;
 }
