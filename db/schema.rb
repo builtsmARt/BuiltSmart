@@ -25,14 +25,8 @@ ActiveRecord::Schema.define(version: 20170227220158) do
   end
 
   create_table "ikea_products", force: :cascade do |t|
-    t.string   "product_name"
-    t.string   "photo"
-    t.string   "article_num"
-    t.string   "pdf"
-    t.string   "desc"
-    t.string   "type"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|
