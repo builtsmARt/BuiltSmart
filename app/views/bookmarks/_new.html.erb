@@ -1,6 +1,6 @@
 <div class="bookmark_new_form" >
   <%= form_for :bookmark, :url => '/bookmarks'  do |f| %>
-  <input type="hidden" name="product_id" value="<%=@product.id%>">
-   <%= f.submit %>
+    <input type="hidden" name="product_id" value="<%=@product.id%>">
+    <%= f.submit %>
   <% end %>
 </div>

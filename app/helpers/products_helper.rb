@@ -8,7 +8,6 @@ module ProductsHelper
     response = Net::HTTP.get(URI(root))
     parsed_response = JSON.parse(response)["items"][0]
     @item_info={results: parsed_response}
-    # @product = Product.new(title: parsed_response["title"])
   end
 
 end
