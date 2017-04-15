@@ -10,9 +10,6 @@ To view the website live please visit the following link:<br>
 https://www.builtsmart.herokuapp.com
 
 ![homepage](https://cloud.githubusercontent.com/assets/22533214/25067209/41aedb10-220a-11e7-95c1-94012a1d8594.jpg)
-![login](https://cloud.githubusercontent.com/assets/22533214/25067204/fd68fa6c-2209-11e7-9712-ddb4456ed0d2.png)
-![browse](https://cloud.githubusercontent.com/assets/22533214/25067207/fd6a6348-2209-11e7-9b9b-cc8e739185fc.png)
-![pdf](https://cloud.githubusercontent.com/assets/22533214/25067205/fd69b8d0-2209-11e7-8923-a35480380f82.png)
 
 Features
 -------
@@ -23,6 +20,10 @@ Features
 5. User can rate on the difficulty of assembly
 6. User can comment on the difficulty of assembly
 7. Users can access the phone app from the website if they have downloaded it
+
+![login](https://cloud.githubusercontent.com/assets/22533214/25067204/fd68fa6c-2209-11e7-9712-ddb4456ed0d2.png)
+![browse](https://cloud.githubusercontent.com/assets/22533214/25067207/fd6a6348-2209-11e7-9b9b-cc8e739185fc.png)
+![pdf](https://cloud.githubusercontent.com/assets/22533214/25067205/fd69b8d0-2209-11e7-8923-a35480380f82.png)
 
 Installation Instructions
 -------
