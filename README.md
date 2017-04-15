@@ -6,7 +6,7 @@ builtsmARt is a web and mobile app built in 1 week as a part of Dev Bootcamp's f
 
 This repo describes the <strong>web version</strong> of the app, which provides a one step database for users to search and bookmark  various Ikea PDF manuals, as well as the ability to comment and rate its difficult of assembly.
 
-To view the website live please visit the following link:
+To view the website live please visit the following link:<br>
 https://www.builtsmart.herokuapp.com
 
 ![homepage](https://cloud.githubusercontent.com/assets/22533214/25067209/41aedb10-220a-11e7-95c1-94012a1d8594.jpg)
