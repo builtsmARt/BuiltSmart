@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-   get '/products/search', to: 'products#search', as: 'search'
+  root "welcome#index"
+
     resources :users, only: [:new, :create, :show]
     resources :bookmarks, only: [:index, :create, :destroy, ]
     resources :products, only: [:index, :show] do
       resources :reviews
     end
     resources :sessions, only: [:new, :destroy]
+    get '/products/search', to: 'products#search', as: 'search'
     get '/sessions/login', to: 'sessions#login', as: 'login'
     post '/sessions/login', to: 'sessions#create'
     get '/sessions/logout', to: 'sessions#destroy', as: "logout"
@@ -17,5 +19,5 @@ Rails.application.routes.draw do
     get '/apis/users', to: 'apis#users'
     post '/apis/valid_login', to: 'apis#valid_login'
 
-    root "welcome#index"
+
 end
